@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Todos from "./components/Todos"
+import nav from "./components/Nav"
 
 class App extends Component{
   state = {
@@ -38,6 +39,7 @@ class App extends Component{
   render(){
     return(
       <div className='App'>
+        <nav />
         <Todos todos = {this.state.todos} markComplete = { this.markComplete } delTodo = { this.delTodo }/>
         </div>
     )
