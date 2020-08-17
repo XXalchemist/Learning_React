@@ -4,18 +4,21 @@ import propTypes from 'prop-types'
 
 class TodoItems extends Component {
     
-    const getStyle = ()=>{
+    getStyle = ()=>{
         return {
-            textDecoration : this.props.todo.completed ? `line-through` : none
+            textDecoration : this.props.todo.completed ? `line-through` : 'none'
         }
     }
     render() { 
+        // Destructuring
+        const { id, title } = this.props.todo
         return (
-            <div style= { this.getStyle }>
-                <h3>{ this.props.todo.title }</h3>
+            <div style= { this.getStyle ()}>
+                <p>{ title }
                 <input
                 type = 'checkbox'
-                onChange = { this.props.markComplete }/>
+                onChange = { this.props.markComplete.bind(this,id) }/>
+                </p>
             </div>
         );
     }
