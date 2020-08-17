@@ -1,6 +1,6 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-class Todo extends Component {
+class Todos extends Component {
     
     render(){
     return (
@@ -10,4 +10,4 @@ class Todo extends Component {
   )};
 }
 
-export default Todo;
+export default Todos;
