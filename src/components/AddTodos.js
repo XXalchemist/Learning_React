@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 
-export default AddTodos extends Component {
+export default class AddTodos extends Component {
     render(){
 
         return(
             <form>
                 <input 
-                type = "text" {{ flrx : 10 }}
+                type = "text" 
+                style = {{ flex : 10 }}
                 name = 'title'
                 paceholder = ' Add Your Work '
                 />
