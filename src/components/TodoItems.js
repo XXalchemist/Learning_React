@@ -20,7 +20,8 @@ class TodoItems extends Component {
                 onChange = { this.props.markComplete.bind(this,id) }/>
                 { title }
 
-                <button className = "btn btn-sm btn-danger">
+                <button onClick =  { this.props.delTodo.bind(this,id) } 
+                className = "btn btn-sm btn-danger">
                     <span className="fas fa-trash-alt"></span>
                 </button>
                 
