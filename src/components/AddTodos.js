@@ -21,6 +21,7 @@ export default class AddTodos extends Component {
        
         
         return(
+            <div className ='container'>
             <form style = {{ display:'flex' }} onSubmit = {this.onSubmit}>
             <input 
             type = 'text'
@@ -38,6 +39,8 @@ export default class AddTodos extends Component {
                 style = {{ flex:1 }} 
                 />
             </form>
+            <p></p>
+            </div>
         )
     }
     

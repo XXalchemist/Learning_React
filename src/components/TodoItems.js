@@ -13,19 +13,25 @@ class TodoItems extends Component {
         // Destructuring
         const { id, title } = this.props.todo
         return (
-            <div style= { this.getStyle ()}>
-                <p>
-                <input
-                type = 'checkbox'
-                onChange = { this.props.markComplete.bind(this,id) }/>
-                { title }
-
-                <button onClick =  { this.props.delTodo.bind(this,id) } 
-                className = "btn btn-sm btn-danger">
-                    <span className="fas fa-trash-alt"></span>
-                </button>
+            <div className= 'container' style= { this.getStyle ()}>
                 
-                </p>
+                <div className="card">
+                    <div className="card-body" > 
+                    <h5 className="card-title">{ title }</h5>
+                    <hr></hr>
+                    <input
+                    type = 'checkbox'
+                    onChange = { this.props.markComplete.bind(this,id) }/>
+                    <button onClick =  { this.props.delTodo.bind(this,id) } 
+                    className = "btn btn-sm btn-danger">
+                        <span className="fas fa-trash-alt"></span>
+                    </button>
+                
+                
+                </div>
+                
+                </div>
+                <p></p>
             </div>
         );
     }
