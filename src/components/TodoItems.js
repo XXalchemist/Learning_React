@@ -5,7 +5,7 @@ import propTypes from 'prop-types'
 class TodoItems extends Component {
     render() { 
         return (
-            <div>
+            <div style= {{ backgroundColor: 'Blue'}}>
                 <h3>{ this.props.todo.title }</h3>
             </div>
         );

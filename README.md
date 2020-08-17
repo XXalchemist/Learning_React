@@ -33,3 +33,5 @@ className
 ```
 
 # Project ToDo react app
+
+`Inline CSS in React = style = {{ }}`
