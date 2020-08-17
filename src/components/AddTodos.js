@@ -1,41 +1,39 @@
 import React, { Component } from 'react';
 
 export default class AddTodos extends Component {
+    state = {
+        title :''
+    }
+
+    onChange = (e)=> {
+        this.setState({
+            [e.target.name]:e.target.value
+        })
+    }
+
+    onSubmit = (e)=>{
+        e.preventDefault()
+        this.props.addTodo(this.state.title)
+        this.setState({title:''})
+    }
     render(){
-        state = {
-            title = ''
-        }
-
-        onChange = (e)=> {
-            this.setState({title: e.target.name})
-        }
-
-        onSubmit = (e)=>{
-            e.preventDefault()
-            this.props.adddTodo(this.state.title)
-            this.setState({title:''})
-        }
-        <form onsubmit = {this.onSubmit}>
+       
+       
+        
+        return(
+            <form style = {{ display:'flex' }} onSubmit = {this.onSubmit}>
             <input 
             type = 'text'
             name = 'title'
-            style = {{}}
+            style = {{ flex: '10' , padding: '5px' }}
             value = { this.state.title }
+            placeholder = 'Add your todos...'
             onChange = { this.onChange }
             />
-
-
-        return(
-            <form>
-                <input 
-                type = "text" 
-                style = {{ flex : 10 }}
-                name = 'title'
-                paceholder = ' Add Your Work '
-                />
-                <input
+    
+            <input
                 type = 'submit'
-                value = 'submit'
+                value = 'Add'
                 className = 'btn btn-success'
                 style = {{ flex:1 }} 
                 />
