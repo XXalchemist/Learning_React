@@ -31,7 +31,22 @@ eg.
 ```
 className
 ```
+# ......
 
 # Project ToDo react app
 
-`Inline CSS in React = style = {{ }}`
+`Inline CSS in React can be used through **style = {{ }}**`
+
+- Create, Edit and Delete Todos task.
+- No Database support 
+
+### Screenshot of App :-
+
+!['app.png'](image/app.png)
+
+### More Features that can be added :-
+- Database integration
+- React Context api 
+- React Router
+
+
